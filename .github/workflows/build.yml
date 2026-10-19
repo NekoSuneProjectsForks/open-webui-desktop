@@ -108,6 +108,7 @@ jobs:
             - name: Upload Artifacts
               uses: actions/upload-artifact@v4
               with:
+                retention-days: 1
                   name: ${{ matrix.os }}-${{ matrix.arch }}
                   path: |
                       ${{ matrix.os }}-${{ matrix.arch }}.exe
